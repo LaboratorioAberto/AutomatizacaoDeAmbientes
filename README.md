@@ -1,6 +1,6 @@
 # Automatização De Ambientes
 
-Repositório voltado para o projeto de Automatização de Salas, projeto iniciado na faculdade Senai Fatesg, idealizado no Laboratório Aberto, pelo professor Daniel.
+Repositório voltado para o projeto de Automatização de Ambientes, projeto iniciado na faculdade Senai Fatesg, idealizado no Laboratório Aberto, pelo professor Daniel.
 
 Os participantes do projeto são: 
 
