@@ -1,0 +1,59 @@
+{% extends 'controle/base.html' %}
+{% load static %}
+{% block content %}
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <label class="navbar-brand">Menu</label>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/embarcados-comum/">Embarcados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ambientes-comum/">Ambientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Relatórios</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row margins mt-5" style="margin-left: 13%; margin-right: 13%;">
+        <div class="col-md-4 input-group">
+          <input type="text" class="form-control" placeholder="Pesquisar por..." aria-label="Pesquisar por..."
+                 aria-describedby="basic-addon1">
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="button">Pesquisar</button>
+          </span>
+        </div><!-- col -->
+    </div><!-- row -->
+
+      <div class="table-responsive table-margins" style="margin-left: 13.8%; margin-right: 13.8%;">
+        <table class="table table-bordered table-striped table-sm">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col" class="th-sm">ID<i class="fa fa-sort float-right" aria-hidden="true"></i></th>
+              <th scope="col" class="">Área</th>
+              <th scope="col">Bloco</th>
+              <th scope="col">Sala</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for ambiente in ambientes %}
+                <tr>
+                    <td>{{ ambiente.id }}</td>
+                    <td>{{ ambiente.area }}</td>
+                    <td>{{ ambiente.bloco }}</td>
+                    <td>{{ ambiente.sala }}</td>
+                </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+{% endblock %}
